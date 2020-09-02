@@ -83,7 +83,7 @@ public class Config {
         List<ConfigProfile> potentialConfig;
         potentialConfig = instance.getProfile()
                 .stream()
-                .filter(ConfigProfile -> ConfigProfile.getName().equals(name))
+                .filter(configProfile -> configProfile.getName().equals(name))
                 .collect(Collectors.toList());
         if (potentialConfig.size() == 0 && name.equals("default"))
             throw new IllegalArgumentException("Default configuration profile doesn't exist");
